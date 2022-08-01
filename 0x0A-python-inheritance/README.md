@@ -1,6 +1,15 @@
-# 
-##
-##
+# 0x0A. Python - Inheritance 
+## About
+- Superclass, baseclass or parentclass
+- How to list all attributes and methods of a class or instance
+- Inherit Class from another
+- Define a class with multiple base classes
+- Override a method or attribute inherited from the base class
+- when and how to use isinstance, issubclass, type and super built-in functions
+## Requirements
+- Compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+- Code should use the pycodestyle (version 2.8.*)
+## File Description
 **Mandatory tasks**
 - 0-lookup.py: Python function that returns a list of available attributes and methods of an objects.
 - 1-my_list.py: Python class MyList that inherits from list. Includes:
