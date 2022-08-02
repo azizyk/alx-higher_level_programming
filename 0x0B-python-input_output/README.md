@@ -11,39 +11,43 @@
 - Code should use the pycodestyle (version 2.8.*)
 ## File description
 **Mandatory tasks**
-- 0-read_file.py: Python function that prints the contents of a UTF8 text file to standard output.
-- 1-number_of_lines.py: Python function that returns the number of lines contained in a text file.
-- 2-read_lines.py: Python function that prints n lines of a UTF8 text file to standard output.
-- 3-write_file.py: Python function that writes a string to a UTF8 text file and returns the number of characters written.
-- 4-append_write.py: Python function that appends a string to the end of a UTF8 text file and returns the number of characters appended.
-- 5-to_json_string.py: Python function that returns the JSON string representation of an object.
-6-from_json_string.py: Python function that returns the Python object represented by a JSON string.
-- 7-save_to_json_file.py: Python function that writes an object to a text file using JSON representation.
-- 8-load_from_json_file.py: Python function that creates an object from a .json file.
-- 9-add_item.py: Python script that stores all command line arguments to a Python list saved in the file add_item.json.
-- 10-class_to_json.py: Python function that returns the dictionary description for simple Python data structures (lists, dictionaries, strings, integers and booleans).
-- 11-student.py: Python class Student that defines a student. Includes:
+- 0-Write a function that reads a text file (UTF8) and prints it to stdout:
+- 1-Write a function that writes a string to a text file (UTF8) and returns the number of characters written:
+- 2- Write a function that appends a string at the end of a text file (UTF8) and returns the number of characters added:
+- 3-Write a function that returns the JSON representation of an object (string):
+- 4-Write a function that returns an object (Python data structure) represented by a JSON string:
+- 5-Write a function that writes an Object to a text file, using a JSON representation:
+- 6-Write a function that creates an Object from a “JSON file”:
+- 7-Write a script that adds all arguments to a Python list, and then save them to a file:
+- 8-Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:
+- 9-Write a class Student that defines a student by:
 	+ Public instance attributes first_name, last_name, and age.
 	+ Instantiation with first_name, last_name, and age: def __init__(self, first_name, last_name, age):.
-	+ Public method def to_json(self): that returns the dictionary representation of a Student instance.
-
-- 12-student.py: Python class Student that defines a student. Builds on 11-student.py with:
-	+ Public method def to_json(self, attrs=None): that returns the dictionary representation of a Student instance.
-	+ If attrs is a list of strings, only the attributes listed are represented in the dictionary.
-- 13-student.py: Python class Student that defines a student. Builds on 12-student.py with:
-	+ Public method def reload_from_json(self, json): that replaces all attributes of the Student instance using the key/value pairs listed in json.
-	+ The method assumes json is a dictionary containing attributes with name/value corresponding to key/value.
-- 14-pascal_triangle.py: Python function that returns a list of lists of integers representing Pascal's triangle of size n.
+	+ Public method def to_json(self): that returns the dictionary representation of a Student instance (same as 8-class_to_json.py)
+- 10-Write a class Student that defines a student by:
+	+ Public instance attributes first_name, last_name, and age.
+	+ Instantiation with first_name, last_name, and age: def __init__(self, first_name, last_name, age):.
+	+ Public method def to_json(self): that returns the dictionary representation of a Student instance (same as 8-class_to_json.py)
+	- If attrs is a list of strings, only attribute names contained in this list must be retrieved.
+	- Otherwise, all attributes must be retrieved
+- 11-Write a class Student that defines a student by: (based on 10-student.py)
+	+ Public instance attributes: first_name, last_name, and age.
+	+ Instantiation with first_name, last_name, and age: def __init__(self, first_name, last_name, age):
+	+ Public method def to_json(self): that returns the dictionary representation of a Student instance (same as 8-class_to_json.py>
+		- If attrs is a list of strings, only attributes name contain in this list must be retrieved.
+		- Otherwise, all attributes must be retrieved
+	+ Public method def reload_from_json(self, json): that replaces all attributes of the Student instance:
+		- You can assume json will always be a dictionary
+		- A dictionary key will be the public attribute name
+		- A dictionary value will be the value of the public attribute
+- 12-pascal_triangle.py: Create a def pascal_trinangle(n): that returns a list of lists of integers representing Pascal's triangle of size n.
 Assumes the size parameter n is an integer.
 	+ If n is less than or equal to 0, returns an empty list.
+
 **Advanced tasks**
 
-- 100-append_after.py: Python function that inserts a line of text to a file after each line containing a specified string.
-- 101-stats.py: Python script that reads lines from standard input. After every 10 lines or the input of a keyboard interruption (CTRL + C), computes the following metrics:
+- 100-append_after.py: Write a function that inserts a line of text to a file after each line containing a specified string.
+- 101-stats.py: Write a script that reads stdin line by line and computes metrics:
 	+ Total file size up that point: File size: <total size>
 	+ Status code of each read line, printed in ascending order: <status code>: <number>
 	+ Input format: <IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>
-- read_write_heap.py: Python script that finds and replaces a string in the heap of a running process.
-	+ Usage: read_write_heap.py pid search_string replace_string where pid is the process ID of the running process and strings are represented in ASCII.
-	+ Only looks in the heap of the process.
-	+ On a usage error, prints an error message to stdout and exits with the status code 1.
