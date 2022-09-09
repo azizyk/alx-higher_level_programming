@@ -1,2 +1,2 @@
--- Lists all databases of the MySQL server.
-SHOW DATABASES;
+-- Creates a database.
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
